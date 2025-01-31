@@ -3,28 +3,34 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 
-const Index = () => {
+const Home = () => {
   const router = useRouter();
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Index</Text>
-      <Button title="Go to Register" onPress={() => router.push('/register')} />
+      <Text style={styles.title}>Dashboard</Text>
+      <Text style={styles.subtitle}>Welcome to your dashboard!</Text>
+      <Button title="Logout" onPress={() => router.push('/register')} />
     </SafeAreaView>
   );
 };
 
-export default Index;
+export default Home;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 18,
     marginBottom: 20,
   },
 });
